@@ -16,7 +16,7 @@ class _ResultPageState extends State<ResultPage> {
 
   Map weatherData;
   fetchData() async {
-    http.Response response = await http.get("http://api.openweathermap.org/data/2.5/weather?q="+widget.city+"&appid=e01cc9f18367170be0955715002f0658");
+    http.Response response = await http.get("http://api.openweathermap.org/data/2.5/weather?q="+widget.city+"&appid={YOUR_API_KEY}");
     setState(() {
       weatherData = jsonDecode(response.body);
     });
